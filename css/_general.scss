@@ -1,0 +1,59 @@
+/* General*/
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-size: 100%;
+    max-width:1920px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1,h2,h3,p,span{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* Clearfix*/
+
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix{
+	*zoom: 1;
+}

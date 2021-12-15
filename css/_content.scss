@@ -1,0 +1,648 @@
+body{
+
+   
+
+    @media (max-width:$size-l) {
+        font-size: 80%;
+    }
+
+    @media (max-width:$size-m) {
+        font-size: 70%;
+    }
+
+    @media(max-width: $size-s){
+        font-size: 100%;
+    }
+
+    @media(max-width: $size-xxs){
+        font-size: 60%;
+    }
+
+    
+}
+
+
+main{
+    margin-top: em(62);
+    display: flex;
+    
+
+    @media (max-width:$size-s) {
+        font-size: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media (max-width:$size-xs) {
+        margin: 2em;
+    }
+
+}
+aside{
+    display: flex;
+    width: 100%;
+    position: relative;
+    .social{
+        margin-top: em(185);
+        width: 5%;
+        margin-left: em(34);
+        
+        z-index: 150;
+        display: flex;
+        flex-direction: column;
+        @media(max-width: $size-s){
+            width: 100%;
+            margin-top: 5em;
+            margin-bottom: 5em;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    @media(max-width: $size-s){
+        width: 80%;
+        order: 2;
+        margin-top: 0;
+        flex-direction: column;
+    }
+}
+
+i{
+    font-size: em(32);
+}
+
+.circle{
+    width: 100%;
+    border: 1px solid $color-primary;
+    border-radius:50%;
+    position: relative;
+    
+
+    i{
+        color: $color-headline;
+    }
+    
+    
+    &:not(:first-child){
+        margin-top: em(30);
+    }
+
+    &::after{
+        content:"";
+        display:block;
+        padding-bottom:100%;
+    }
+
+    .description{
+        display: none;
+    }
+    
+}
+
+.circle-text{
+    position: absolute;
+    bottom: 50%;
+    transform: translate(0, 50%);
+    width: 100%;
+    text-align:center;
+    color: $color-headline;
+  }
+
+  
+  #small-down{
+      display: none;
+      @media(max-width: $size-s){
+        display: flex;
+        
+    }
+  }
+
+  #down{
+    @include box-shadow;
+    margin-top: em(380);
+    border: 1px solid rgba(0, 0, 0, 0.002);
+    color: $color-primary-btn;
+    position: relative;
+    transition: .4s all ease;
+
+    @media(max-width:$size-xxl){
+        margin-top: em(330);
+        
+    }
+
+    @media(max-width:$size-s){
+        display: none;
+        
+    }
+    
+    &:hover,
+    &:focus{
+        background: $color-primary-btn;
+        i{
+            color:$color-btn-text;
+        }
+
+    &::before{
+        content: "Show More Trips";
+        position: absolute;
+        right: em(-130);
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: em(26);
+        white-space: nowrap;
+    }    
+    }
+    
+
+    i{
+        color:$color-primary-btn;
+    }
+
+    &::before{
+        content: "Show More Trips";
+        position: absolute;
+        right: em(-130);
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: em(26);
+        white-space: nowrap;
+    }
+}
+
+  
+
+
+  .shapes{
+    margin-right: em(94);  
+    margin-left: em(94);
+    position: relative;
+    @media(max-width: $size-s){
+        order: 2;
+        display: flex;
+        justify-content: center;
+
+        
+    }
+    
+  }
+
+  .shape{
+    border-radius: 63% 37% 25% 75% / 63% 75% 25% 37%   ;
+    max-width: em(780);
+    background: $color-primary;
+    position:relative;  
+    }
+
+.one{
+background: transparentize($color-primary, 0.81);
+transform: rotate(54deg);
+} 
+
+.two{
+background: transparentize($color-primary, 0.7);
+transform: rotate(-35deg);
+
+}
+
+.three{
+    transform: rotate(-19deg);
+    overflow: hidden;
+    box-shadow: 0 em(14) em(25) rgba(0, 0, 0, 0.21); 
+    img{
+        max-width: 160%;
+        height: auto;
+        position: relative;
+        left: em(-200);
+
+        @media(max-width: $size-xxs){
+            left: 0;  
+        }
+    }
+}    
+
+
+.box{
+    max-width: 30%;
+    box-shadow: 0 em(14) em(25) rgba(0, 0, 0, 0.21);
+    border-radius: em(10);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background: $color-btn-text;
+    
+    .pack{
+        margin: em(20) em(54) em(20) em(20);
+        
+    }
+    h3{
+        font-size: em(38);
+        color: $color-primary;
+        margin: 0;
+        
+    }
+    hr{
+        height: em(4);
+        max-width: em(170);
+        border: none;
+        background: $color-secondary;
+        margin: em(10) 0 em(10) 0;
+        
+ 
+    }
+    span{
+        font-size: em(32);
+    }
+
+    
+
+    @media(max-width:$size-xl){
+        font-size: 90%;
+    }
+
+    @media(max-width:$size-m){
+        font-size: 80%;
+    }
+
+    @media(max-width:$size-s){
+        display: none;
+    
+        
+    }
+}
+
+.small-box{
+    display: none;
+    margin: 2em 0;
+    font-size: 1.4em;
+
+    h1:first-child{
+        color: $color-primary;
+    }
+    @media(max-width:$size-s){
+
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+.social{
+
+    .button{
+        &:not(:first-child){
+            margin-top: em(30);
+            @media(max-width:$size-s){
+                margin-top: 0;
+                margin-left: .5em;
+            }
+
+        }
+        
+        display: inline-block;
+        height: em(60);
+        width: em(60);
+        overflow: hidden;
+        border-radius: em(50);
+        border: 1px solid $color-primary;
+        cursor: pointer;
+        box-shadow: 0 em(10) em(10) rgba(0,0,0,0.1);
+        transition: all 0.3s ease-out;
+
+        
+        &:hover,
+        &:focus{
+            width: em(200);
+            border: none;
+            background: $color-primary-btn;
+            color: $color-btn-text;
+            @media(max-width:$size-s){
+                width: 40%;
+            }
+
+
+        }
+
+        @media(max-width:$size-s){
+            display: flex;
+            width: 25%;
+            font-size: 80%;
+            
+            
+        }
+
+        @media(max-width:$size-xs){
+            font-size: 60%;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        span{
+            font-size: em(20);
+            line-height: em(60,20);
+            margin-left: em(10,20);
+            transition: all 0.3s ease-out;
+        }
+        .icon{
+            display: inline-block;
+            height: em(60);
+            width: em(60);
+            text-align: center;
+            border-radius: em(50);
+            box-sizing: border-box;
+            line-height: em(60);
+            transition: all 0.3s ease-out;
+            i{
+                font-size: em(25);
+                line-height: em(60,25);
+                transition: all 0.3s ease-out;
+                
+            }
+        }
+    }
+
+    @media(max-width:$size-s){
+        font-size: 150%;
+        order: 3;
+        margin-left: 0!important;
+    }
+}
+
+
+
+
+
+
+  ////////ARTICLE////////
+article{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    
+
+    @media(max-width: $size-s){
+        order: 1;
+        width: 100%;
+    }
+}
+
+
+
+.container{
+    max-width: em(684);
+    margin: 0 auto;
+    @media(max-width: $size-s){
+        text-align: center;
+    }
+    
+}
+
+.headline{
+    display: flex;
+    margin-bottom: em(41);
+    margin-left: em(40);
+    h1{
+        font-size: em(90);
+    }
+
+    @media(max-width:$size-xxl){
+        font-size: 90%;
+    }
+
+    @media(max-width:$size-m){
+        font-size: 80%;
+    }
+
+    @media(max-width: $size-s){
+        font-size: 100%;
+        flex-wrap: wrap;
+        margin-left: 0;
+        
+    }
+
+    
+}
+
+#headline{
+    color: $color-headline;
+    text-transform: capitalize;
+    word-spacing: 100vh;
+    text-shadow: 0 14px 25px rgba(0, 0, 0, 0.21);
+
+    @media(max-width: $size-s){
+        
+        word-spacing: normal;
+        
+    }    
+    
+}
+
+#country{
+    color: $color-primary;
+    text-transform: capitalize;
+    align-self: flex-end;
+    @media(max-width: $size-s){
+        margin: auto;
+        font-size: 8em;
+    }
+}
+
+.block{
+    border-left: em(4) solid $color-primary;
+    padding-left: em(40);
+
+    p{
+        font-size: em(28);
+        color: $color-paragraph;
+    }
+
+    @media(max-width: $size-s){
+        border-left: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        
+    }
+}
+
+.btn{
+    background: $color-secondary;
+    border: none;
+    color: $color-btn-text;
+    font-size: em(27);
+    max-width: em(203,27);
+    height: em(61,27);
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0 em(22.5) 0 em(22.5);
+    margin-top: em(51,27);
+    overflow: hidden;
+    transition : .2s;
+    cursor: pointer;
+
+
+    
+   
+    
+}
+
+.decoration{
+
+    color: transparentize($color-primary, 0.92);
+    font-size: em(16);
+    margin-top: em(169);
+
+    td{
+        padding: em(5);
+    }
+
+    @media(max-width:$size-s){
+        display: none;
+    }
+}
+
+.slider{
+    position: absolute;
+    right: em(-180);
+    display: flex;
+    margin-top: em(68);
+    img{
+        transition: all ease-out .4s;
+        &:hover,
+        &:focus
+        {
+            transform: scale(1.05);
+        }
+    }
+    
+    @media(max-width: $size-s){
+        border-left: none;
+        position: static;
+        
+        
+    }
+    
+}
+
+.buttons{
+    font-size: em(26);
+    position: absolute;
+    right: em(248,26);
+    top: em(92,26);
+    align-items: center;
+    display: flex;
+    height: auto;
+    @media(max-width: $size-s){
+        display: none;
+        z-index: -100;
+        font-size: 1%;
+        
+    }
+}
+
+#more{
+    padding: em(12,26) em(20,26) em(12,26) em(20,26);
+    margin-right: em(10);
+    background: rgba(255, 255, 255, 0.81);
+    border: none;
+    border-radius: em(50,26);
+    white-space: nowrap;
+    color: $color-primary;
+}
+
+#next{
+    background: rgba(255, 255, 255, 0.81);
+    border: none;
+    border-radius: 50%;
+    padding: em(17);
+    margin: 0;
+    
+    i{
+        color: $color-primary;
+        left: 0;
+        font-size: em(22);
+    }
+}
+
+#more:hover,#next:hover,
+#more:focus,#next:focus{
+    background: $color-primary;
+    color: $color-btn-text;
+    cursor: pointer;
+    i{
+        color: $color-btn-text;
+    }
+}
+
+//////BUTTON/////
+
+.button-book {
+    background: $color-secondary;
+    margin : em(20) auto;
+    max-width: em(203,27);
+    height: em(61,27);
+    padding: 1.9em 6em;
+    cursor: pointer;
+    text-align : center;
+    transition : .2s;
+    margin: 0;
+    margin-top: em(51);
+    position: relative;
+    overflow: hidden;
+    @media(max-width: $size-s){
+        max-width: 100%;
+    }
+
+    @media(max-width: $size-xxs){
+        max-width: 80%;
+    }
+    
+    
+  }
+  .btnTwo {
+    position : relative;
+    top: em(67);
+    width : em(200);
+    height : em(100);
+    margin-top: em(-180);
+    margin-right: em(200);
+    background : $color-primary;
+    left : em(-350);
+    transition : .3s;
+  }
+  #btnText {
+    color: $color-btn-text;
+    transition : .3s;
+    font-size: em(27);
+    white-space: nowrap;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    
+  }
+  #btnText2 {
+    margin-top : em(80,27);
+    padding-top: em(18,27);
+    margin-right : em(-130,27);
+    color : $color-btn-text;
+    font-size: em(27);
+  }
+  .button-book:hover .btnTwo,
+  .button-book:focus .btnTwo
+  { 
+    left: em(-130);
+  }
+  .button-book:hover #btnText,
+  .button-book:focus #btnText{ 
+    margin-left : em(100);
+  }
+  
+  
