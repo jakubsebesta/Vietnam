@@ -85,6 +85,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
+  height: 100%;
 }
 
 @media (max-width: 1180px) {
@@ -95,6 +97,7 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    overflow: visible;
   }
 }
 
@@ -144,6 +147,20 @@ aside .social {
 @media (max-width: 1180px) {
   aside {
     width: 80%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -421,16 +438,12 @@ i {
   }
 }
 
-.social .button:hover, .social .button:focus {
-  width: 12.5em;
-  border: none;
-  background: #789376;
-  color: #ffffff;
-}
-
-@media (max-width: 1180px) {
+@media (min-width: 1180px) {
   .social .button:hover, .social .button:focus {
-    width: 40%;
+    width: 12.5em;
+    border: none;
+    background: #789376;
+    color: #ffffff;
   }
 }
 
@@ -527,15 +540,13 @@ article {
 }
 
 .headline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-bottom: 2.5625em;
   margin-left: 2.5em;
 }
 
 .headline h1 {
   font-size: 5.625em;
+  text-shadow: 0 14px 25px rgba(0, 0, 0, 0.21);
 }
 
 @media (max-width: 1800px) {
@@ -563,7 +574,6 @@ article {
   color: #000000;
   text-transform: capitalize;
   word-spacing: 100vh;
-  text-shadow: 0 14px 25px rgba(0, 0, 0, 0.21);
 }
 
 @media (max-width: 1180px) {
@@ -575,14 +585,14 @@ article {
 #country {
   color: #378F32;
   text-transform: capitalize;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  margin-left: .8em;
 }
 
 @media (max-width: 1180px) {
   #country {
     margin: auto;
-    font-size: 8em;
+    font-size: 2em;
+    margin-left: 0;
   }
 }
 
@@ -594,6 +604,13 @@ article {
 .block p {
   font-size: 1.75em;
   color: #7D7D7D;
+  line-height: 1.5;
+}
+
+@media (max-width: 550px) {
+  .block p {
+    font-size: 3em;
+  }
 }
 
 @media (max-width: 1180px) {

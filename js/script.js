@@ -1,6 +1,6 @@
 'use strict';
 
-/////dotts////////
+/////dotts/////////
 let decor = document.querySelector('.decoration');
 
 for (let i = 0; i < 16; i++){
@@ -51,12 +51,6 @@ buttonsArr.forEach(element => {
     });
 
 });
-
-
-
-
-
-
 
 ///////FUNCTIONS////////
 

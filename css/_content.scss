@@ -1,7 +1,5 @@
 body{
 
-   
-
     @media (max-width:$size-l) {
         font-size: 80%;
     }
@@ -25,12 +23,15 @@ body{
 main{
     margin-top: em(62);
     display: flex;
+    overflow: hidden;
+    height: 100%;
     
 
     @media (max-width:$size-s) {
         font-size: 80%;
         flex-wrap: wrap;
         justify-content: center;
+        overflow: visible;
     }
 
     @media (max-width:$size-xs) {
@@ -61,6 +62,13 @@ aside{
 
     @media(max-width: $size-s){
         width: 80%;
+        order: 2;
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    @media(max-width: $size-xs){
+        width: 100%;
         order: 2;
         margin-top: 0;
         flex-direction: column;
@@ -190,7 +198,7 @@ i{
     border-radius: 63% 37% 25% 75% / 63% 75% 25% 37%   ;
     max-width: em(780);
     background: $color-primary;
-    position:relative;  
+    position:relative; 
     }
 
 .one{
@@ -215,7 +223,7 @@ transform: rotate(-35deg);
         left: em(-200);
 
         @media(max-width: $size-xxs){
-            left: 0;  
+            left: 0; 
         }
     }
 }    
@@ -310,18 +318,15 @@ transform: rotate(-35deg);
         box-shadow: 0 em(10) em(10) rgba(0,0,0,0.1);
         transition: all 0.3s ease-out;
 
-        
-        &:hover,
-        &:focus{
+        @media(min-width:$size-s){
+            &:hover,
+            &:focus{
             width: em(200);
             border: none;
             background: $color-primary-btn;
             color: $color-btn-text;
-            @media(max-width:$size-s){
-                width: 40%;
+           
             }
-
-
         }
 
         @media(max-width:$size-s){
@@ -401,11 +406,11 @@ article{
 }
 
 .headline{
-    display: flex;
     margin-bottom: em(41);
     margin-left: em(40);
     h1{
         font-size: em(90);
+        text-shadow: 0 14px 25px rgba(0, 0, 0, 0.21);
     }
 
     @media(max-width:$size-xxl){
@@ -423,15 +428,13 @@ article{
         
     }
 
-    
 }
 
 #headline{
     color: $color-headline;
     text-transform: capitalize;
     word-spacing: 100vh;
-    text-shadow: 0 14px 25px rgba(0, 0, 0, 0.21);
-
+    
     @media(max-width: $size-s){
         
         word-spacing: normal;
@@ -443,10 +446,11 @@ article{
 #country{
     color: $color-primary;
     text-transform: capitalize;
-    align-self: flex-end;
+    margin-left: .8em;
     @media(max-width: $size-s){
         margin: auto;
-        font-size: 8em;
+        font-size: 2em;
+        margin-left: 0;
     }
 }
 
@@ -457,6 +461,13 @@ article{
     p{
         font-size: em(28);
         color: $color-paragraph;
+        line-height: 1.5;
+
+        @media(max-width: $size-xxs){
+
+            font-size: 3em;
+
+        }
     }
 
     @media(max-width: $size-s){
